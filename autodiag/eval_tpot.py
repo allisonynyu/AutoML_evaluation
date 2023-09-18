@@ -6,15 +6,6 @@ import tpot
 from tpot import TPOTRegressor
 from autodiag.utils import retrieve_exam, search, insert_record
 
-config = {
-    'user': 'root',
-    'password': 'root',
-    'host': 'localhost',
-    'unix_socket': '/Applications/MAMP/tmp/mysql/mysql.sock',
-    'database': 'eval_automl',
-    'raise_on_warnings': True
-}
-
 
 # the unit of time budget in second (e.g. 600 stands for 600 seconds)
 def eval_tpot(openml_id, exam_id, time_budget, n_jobs=8):
